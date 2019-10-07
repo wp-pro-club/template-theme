@@ -43,5 +43,5 @@ elif [ "$conf_app_theme_package" == "composer_bitbucket" ]; then
         project=$conf_app_theme_rename
     fi
     composer config repositories.$project '{"type":"package","package": {"name": "'$project'","version": "'$project_ver'","type": "wordpress-theme","dist": {"url": "'$project_zip'","type": "zip"}}}'
-    composer require $project:dev-master --update-no-dev
+    composer require $project:$project_ver --update-no-dev
 fi
